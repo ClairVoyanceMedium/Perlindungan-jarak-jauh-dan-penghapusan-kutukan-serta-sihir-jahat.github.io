@@ -1,42 +1,100 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# Robots.txt dioptimalkan untuk tahun 2025 - Mengungguli keunggulan
+# Dirancang untuk pasar Indonesia, SEO canggih, AI, dan asisten suara
+# Situs: https://clairvoyancemedium.github.io/Perlindungan-jarak-jauh-dan-penghapusan-kutukan-serta-sihir-jahat.github.io/
+# Pembaruan terakhir: 21/04/2025 14:00 GMT
+# Catatan: Uji dengan Google Search Console dan robotstxt.org untuk validasi
+
+##########################
+# Izin Umum              #
+##########################
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
-Disallow: /private/
+Disallow: /pribadi/          # Direktori pribadi (mis. admin, skrip)
+Disallow: /sementara/        # Folder sementara
+Disallow: /*?*               # Hindari konten duplikat (parameter URL)
+Allow: /*.css$               # CSS untuk rendering optimal
+Allow: /*.js$                # JS esensial
+Allow: /*.pdf$               # Izinkan PDF strategis (mis. panduan)
+Allow: /                     # Izin default
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
-
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
+########################################
+# Googlebot (termasuk Google AI 2025)  #
+########################################
 User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
+Disallow: /pribadi/
+Disallow: /sementara/
+Allow: /ritual/
+Allow: /perlindungan/
+Allow: /penghapusan-kutukan/
+
+###########################################
+# Asisten Suara                          #
+###########################################
+User-agent: Googlebot-Voice
+Disallow: /pribadi/
+Disallow: /sementara/
+Allow: /faq/
+Allow: /ritual-sederhana/
+Allow: /saran/
+User-agent: Amazonbot        # Hipotetis untuk Alexa
+Disallow: /pribadi/
+Disallow: /sementara/
+Allow: /faq/
+Allow: /saran/
+User-agent: Applebot         # Hipotetis untuk Siri
+Disallow: /pribadi/
+Disallow: /sementara/
+Allow: /faq/
+Allow: /saran/
+
+###########################################
+# Bing (di luar Google untuk Indonesia)   #
+###########################################
 User-agent: Bingbot
-Allow: /
+Disallow: /pribadi/
+Disallow: /sementara/
 
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
+#################################
+# Pemblokiran bot tidak diinginkan #
+#################################
+User-agent: AhrefsBot
 Disallow: /
-User-agent: EvilScraper
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
 Disallow: /
 
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+##################################################
+# Mitra dan penganalisis Google                 #
+##################################################
+User-agent: Mediapartners-Google
+Disallow: /pribadi/
+User-agent: AdsBot-Google
+Disallow: /pribadi/
+
+##################################################
+# Crawler AI baru (antisipasi 2025)             #
+##################################################
+User-agent: xAI-Crawler
+Disallow: /pribadi/
+User-agent: OpenAI-Crawler
+Disallow: /pribadi/
+User-agent: AnthropicBot
+Disallow: /pribadi/
+User-agent: Qwantify         # Relevansi internasional
+Disallow: /pribadi/
+
+##################################################
+# Optimasi lanjutan (mobile-first)              #
+##################################################
+User-agent: Googlebot-Mobile
+Disallow: /pribadi/
+Disallow: /sementara/
+Allow: /ritual/
+Allow: /perlindungan/
+Allow: /penghapusan-kutukan/
+
+##################
+# Sitemap dan crawl #
+##################
+Sitemap: https://clairvoyancemedium.github.io/Perlindungan-jarak-jauh-dan-penghapusan-kutukan-serta-sihir-jahat.github.io/sitemap.xml
+Crawl-delay: 0.5
